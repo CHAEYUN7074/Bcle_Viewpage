@@ -58,7 +58,7 @@ ul.sidebar, ul.subSidebar
 	<ul class="sidebar">
 		<li><h1>대표 게시판</h1></li>
 		<li><a href="#">자유글</a></li>
-		<li><a href="#">모임홍부</a></li>
+		<li><a href="#">모임홍보</a></li>
 		<li><a href="#">카테고리</a>
 			<ul class="subSidebar">
 				<li><a href="#">1. 여행</a></li>
