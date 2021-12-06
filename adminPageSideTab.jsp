@@ -43,11 +43,27 @@ ul.sidebar, ul.subSidebar
 	color: #fff;
 }
 
+
+.adminsearch
+{
+	margin-left: 30vh;
+}
+
+.search
+{
+	margin-right: 50vh;
+	text-align: right;
+}
+
+
 /* 나중에 여기에 내용 적을 때 적용 css */
 .cd1 
 {
 	margin-left: 30vh;
 }
+
+
+
 </style>
 
 </head>
@@ -118,13 +134,29 @@ ul.sidebar, ul.subSidebar
 </div>
 
 
-
-<div class="cd1">
-	<h1>서브메뉴 제목</h1>
+<div class="adminsearch">
+	<div>
+		<h1>게시판 제목</h1>
+	</div>
 	
-
-
+	
+	<div class="search">
+	         <form action ="" name="searchForm" method="post">
+	            <select name="searchKey" class="selectField">
+	               <option value="subject">여기</option>
+	               <option value="name">내용은</option>
+	               <option value="content">나중에 변경</option>
+	               
+	            </select>
+	            <input type="text" name="searchValue" class="textField" value="검색" placeholder="검색어를 입력해주세요.">
+	            <input type="button" value="검색" >
+	          </form>
+	      </div>
+	
+	
+	<div>
+		<p>글목록이 어쩌구 저쩌구</p>
+	</div>
 </div>
-
 </body>
 </html>
