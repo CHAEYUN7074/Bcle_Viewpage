@@ -6,6 +6,23 @@
 <meta charset="UTF-8">
 <title>adminPageSideTab.jsp</title>
 <style type="text/css">
+
+/*reset*/
+* {margin: 0;padding: 0;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; }
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i, ul {font-style: normal;}
+
+/*layout*/
+.mo {display: none;}
+.en {font-family: 'Exo 2', sans-serif;}
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
+.wrap {margin: 0 auto; }
 .sidebardiv 
 {
 	list-style-type: none;
@@ -71,7 +88,7 @@ ul.sidebar, ul.subSidebar
 
 <div class="sidebardiv">
 	<ul class="sidebar">
-		<li><h1>오늘도 달려요 관리자 페이지</h1></li>
+		<li><h1>관리자 페이지</h1></li>
 		
 		<li><a href="#">회원 관리</a>
 			<ul class="subSidebar">
@@ -134,29 +151,6 @@ ul.sidebar, ul.subSidebar
 </div>
 
 
-<div class="adminsearch">
-	<div>
-		<h1>게시판 제목</h1>
-	</div>
-	
-	
-	<div class="search">
-	         <form action ="" name="searchForm" method="post">
-	            <select name="searchKey" class="selectField">
-	               <option value="subject">여기</option>
-	               <option value="name">내용은</option>
-	               <option value="content">나중에 변경</option>
-	               
-	            </select>
-	            <input type="text" name="searchValue" class="textField" value="검색" placeholder="검색어를 입력해주세요.">
-	            <input type="button" value="검색" >
-	          </form>
-	      </div>
-	
-	
-	<div>
-		<p>글목록이 어쩌구 저쩌구</p>
-	</div>
-</div>
+
 </body>
 </html>
