@@ -1,16 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String cp = request.getContextPath();
+%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>footer.jsp</title>
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
- -->
- <script src="https://kit.fontawesome.com/dab690a483.js" crossorigin="anonymous"></script>
-<style type="text/css">
+<meta charset="utf-8">
+<title>B:CLE Footer(예비용)</title>
 
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+	rel="stylesheet">
+<script src="https://kit.fontawesome.com/dab690a483.js" crossorigin="anonymous"></script>	
+<style type="text/css">
+	
 /*reset*/
 * {margin: 0;padding: 0;}
 body {margin: 0;}
@@ -28,91 +40,67 @@ address, em, i, ul {font-style: normal;}
 body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 .wrap {margin: 0 auto; }
 
-*
+#footer-wrapper
 {
-   margin: 0;
-   padding: 0;
-   font-family: 'Noto Sans KR', sans-serif;
+	background-color: #105B63;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 12pt;
+	/* position:fixed; */
 }
-
-footer
+.title
 {
-    max-height: 30vh;
-    position: relative;
-    width: 100%;
-    height: 300px;
-    bottom: 0px;
-    
-   /*
-   width: 100%;
-   bottom: 0px;
-   position: absolute;
-   height: 300px;
-   display: flex;
-   justify-content: center;
-   */
-   background-color: #FFD34E;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 15pt;
+	color: white;
 }
 
 .container
 {
-  max-width: 1170px;
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 0;
-  height: 100%;
-  /* min-height: 100%; */
+	padding: 20px;
 }
 
-.footer-menu
+ul
 {
-  display: flex;
-  justify-content: space-between;
-  height: 180px;
+   list-style:none;
+   padding-left:0px;
 }
-
-.first-box
+a.menuitem
 {
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+}
+a.menuitem
+{
+	text-decoration: none;
+	text-align: center;
+	color: white;
+}
+a.menuitem:hover
+{
+	color: #FFD34E;
 }
 
+p.menuitem
+{
+	color: white;
+}
 .second-box
 {
-  width: 40%;
   display: flex;
   justify-content: flex-end;
 }
 
-.column {
+.icon
+{
+  /* width: 40%; */
   display: flex;
-  flex-direction: column;
-  padding: 0 15px;
+  justify-content: flex-end;
+  color: #105B63;
 }
 
-.sub-title {
-  color: white;
-  font-weight: 900;
-  margin: 20px 0px;
-  font-size: 20px;
-}
-
-.footer-menu-item
+.icon-box 
 {
-   text-decoration: none;
-  padding-bottom: 15px;
-  padding-top: 3px;
-  font-size: 16px;
-  color: white;
-}
-
-.footer-menu-item:hover
-{
-   color: #105B63;
-}
-
-.icon-box {
   width: 54px;
   height: 54px;
   background-color: white;
@@ -123,72 +111,103 @@ footer
   align-items: center;
 }
 
-.icon {
+.icon 
+{
   font-size: 24px;
 }
 .icon:hover {
-  color: #105B63;
+  color: #FFD34E;
 }
 
-.first-line
+ul.menu
 {
-  color: #919496;
-  display: flex;
-  justify-content: flex-end;
-  font-size: 12px;
+	color: white;
 }
+
 </style>
+
 </head>
 <body>
 
-
 <!-- Footer -->
-<footer>
-      <div class="container">
-          <div class="footer-menu">
-              <div class="first-box">
-                  <div>
-                      <img src="./image/logo.png" width=132>
-                  </div>
-                  <!-- <div class="column col-3 col-6-medium col-12-small"> -->
-                  <div class="column">
+<div id="footer-wrapper">
+	<footer id="footer" class="container">
+		<div class="row">
+			<div class="col-3 col-6-medium col-12-small">
 
-                      <div class="sub-title">B:CLE</div>
-                      <a href="#" class="footer-menu-item">B:CLE 소개</a>
-                      <a href="#" class="footer-menu-item">동아리 개설</a>
-                      <a href="#" class="footer-menu-item">대표 게시판</a>
+				<!-- Links -->
+					<section class="widget links">
+						<div class="title">B:CLE</div>
+						<ul class="style2">
+							<li><a href="#" class="menuitem">일정짜기</a></li>
+							<li><a href="mainhome.action" class="menuitem">커뮤니티</a></li>
+							<!-- <li><a href="#">Felis varius pellentesque potenti</a></li>
+							<li><a href="#">Nullam scelerisque blandit leo</a></li> -->
+						</ul>
+					</section>
 
-                  </div>
-                  <div class="column">
-                      <div class="sub-title">고객센터</div>
-                      <a href="#" class="footer-menu-item">FAQ</a>
-                      <a href="#" class="footer-menu-item">비회원문의</a>
-                      <a href="#" class="footer-menu-item">이용약관</a>
-                  </div>
-                  <div class="column">
-                      <div class="sub-title">Contact Us</div>
-                      <a href="#" class="footer-menu-item">주소 : 서울특별시 마포구 월드컵북로 21 4층 풍성빌딩</a>
-                      <a href="#" class="footer-menu-item">02)1234-5678</a>
-                      <a href="#" class="footer-menu-item">깃헙 주소</a>
-                  </div>
-              </div>
+			</div>
+			<div class="col-3 col-6-medium col-12-small">
 
-              <div class="second-box">
-                  <div class="icon-box">
-                      <i class="fab fa-instagram icon"></i>
-                  </div>
-                  <div class="icon-box">
-                      <i class="fab fa-twitter icon"></i>
-                  </div>
-                  <div class="icon-box">
-                      <i class="fab fa-facebook-f icon"></i>
-                  </div>
-              </div>
-          </div>
-      </div>
-</footer>
+				<!-- Links -->
+					<section class="widget links">
+						<div class="title">고객센터</div>
+						<ul class="style2">
+							<li><a href="#" class="menuitem">FAQ</a></li>
+							<li><a href="#" class="menuitem">문의하기</a></li>
+							<li><a href="#" class="menuitem">이용약관</a></li>
+							<!-- <li><a href="#">Felis varius pellentesque potenti</a></li>
+							<li><a href="#">Nullam scelerisque blandit leo</a></li> -->
+						</ul>
+					</section>
 
+			</div>
+			
+			<div class="col-3 col-6-medium col-12-small">
 
+				<!-- Contact -->
+					<section class="widget contact last">
+						<div class="title">Contact Us</div>
+						
+						<p class="menuitem">B:CLE<br />
+						서울특별시 마포구 월드컵북로 21 2층 풍성빌딩<br />
+						(02) 123-4567</p>
+					</section>
+
+			</div>
+			
+			<div class="col-3 col-6-medium col-12-small">
+
+				<!-- 아이콘 -->
+				<!-- <section class="widget contact last icon"> -->
+					<div class="second-box">
+			              <div class="icon-box">
+			                  <i class="fab fa-instagram icon"></i>
+			              </div>
+			              <div class="icon-box">
+			                  <i class="fab fa-twitter icon"></i>
+			              </div>
+			              <div class="icon-box">
+			                  <i class="fab fa-facebook-f icon"></i>
+			              </div>
+					</div>
+				<!-- </section> -->
+
+			</div>
+			
+		</div>
+		
+		<div class="row">
+			<div class="col-12">
+				<div id="copyright">
+					<ul class="menu" style="text-align: center;">
+						<li>&copy; 2021 B:CLE. All rights reserved</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
 
 </body>
 </html>

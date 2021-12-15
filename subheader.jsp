@@ -45,10 +45,10 @@ margin-bottom: -1.5rem;
 </style>
 <body>
 
-	<div class="subheader">
+<!-- 	<div class="subheader">
 		<p>B:CLE</p>
 		<p class="title">회원되기</p>
-	</div>
+	</div> -->
 
 
 

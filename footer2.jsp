@@ -42,14 +42,16 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 
 #footer-wrapper
 {
-	background-color: #FFD34E;
+	background-color: #105B63;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 12pt;
+	/* position:fixed; */
 }
 .title
 {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 15pt;
+	color: white;
 }
 
 .container
@@ -66,7 +68,7 @@ a.menuitem
 {
 	text-decoration: none;
 	text-align: center;
-	color: black;
+	color: white;
 }
 a.menuitem:hover
 {
